@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class AvoiderWorld extends World
 {
+    private GreenfootSound bkgMusic;
 
     /**
      * Constructor for objects of class MyWorld.
@@ -17,6 +18,10 @@ public class AvoiderWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1, false); 
+        
+        //Initialize the music
+        bkgMusic = new GreenfootSound("sounds/UFO_T-Balt.mp3");
+        bkgMusic.playLoop(); //Play the music
         prepare();
     }
 
@@ -43,6 +48,7 @@ public class AvoiderWorld extends World
     
     public void endGame()
     {
+        bkgMusic.stop();
         AvoiderGameOverWorld go = new AvoiderGameOverWorld();
         Greenfoot.setWorld(go);
     }
