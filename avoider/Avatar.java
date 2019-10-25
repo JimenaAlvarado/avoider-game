@@ -30,8 +30,8 @@ public class Avatar extends Actor
         Actor enemy = getOneIntersectingObject(Enemy.class);
         if(enemy != null)
         {
-            getWorld().removeObject(this);
-            Greenfoot.stop();
+            AvoiderWorld world = (AvoiderWorld) getWorld();
+            world.endGame();
         }
     }
 }
