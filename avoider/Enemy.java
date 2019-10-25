@@ -17,6 +17,7 @@ public class Enemy extends Actor
         // Add your action code here.
         setLocation(getX(),getY() + 1);
         checkRemove();
+        turn(1);
     }    
     
     private void checkRemove()

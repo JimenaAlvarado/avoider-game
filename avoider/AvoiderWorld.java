@@ -32,7 +32,7 @@ public class AvoiderWorld extends World
     
     public void act()
     {
-        if(Greenfoot.getRandomNumber(100) < 2) //Sólo el 2% de las veces que actua 
+        if(Greenfoot.getRandomNumber(1000) < 10) //Sólo el 2% de las veces que actua 
         {
             Enemy e = new Enemy();
             int x = Greenfoot.getRandomNumber(getWidth()-20) + 10;
